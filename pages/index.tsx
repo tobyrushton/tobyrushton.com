@@ -1,24 +1,24 @@
 import React from 'react'
 import type { NextPage } from 'next'
 import styles from '../styles/Home.module.css'
+import ThreeBanner from '../components/threeJS/threeBanner'
 
 const Home: React.FC<NextPage> = () => {
     return (
         <div className={styles.wrapper}>
             <div
-                className={`${styles.header} ${styles.raleway} ${styles.shadow} ${styles.round}`}
+                className={`${styles.banner} ${styles.shadow} ${styles.round}`}
             >
-                <p className={styles.text}>
-                    Under Construction
-                </p>
+                <ThreeBanner />
             </div>
-            <div
-                className={`${styles.body} ${styles.raleway} ${styles.shadow} ${styles.round}`}
-            >
-                <p className={styles.text}>
-                    This site is currently in construction, please check back at a later date.
-                    For now view my current projects
-                </p>
+            <div className={`${styles.banner} ${styles.shadow} ${styles.round}`}>
+                <div className={`${styles.textBox} ${styles.raleway}`}>
+                    <p>
+                        This site is currently in construction, please check
+                        back at a later date.
+                    </p>
+                    <p>For now view my current projects</p>
+                </div>
             </div>
         </div>
     )
