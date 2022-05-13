@@ -50,13 +50,13 @@ const Home: React.FC<NextPage> = () => {
             <div
                 className={`${styles.footer} ${styles.banner} ${styles.shadow} ${styles.round}`}
             >
-                    <a
-                        href="https://github.com/tobyrushton/tobyrushton.com"
-                        rel="noreferrer"
-                        target="_blank"
-                    >
-                        View this site on Github
-                    </a>
+                <a
+                    href="https://github.com/tobyrushton/tobyrushton.com"
+                    rel="noreferrer"
+                    target="_blank"
+                >
+                    View this site on Github
+                </a>
             </div>
         </div>
     )
