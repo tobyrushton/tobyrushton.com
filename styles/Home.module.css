@@ -48,10 +48,11 @@
 }
 
 .footer{
-  padding: .25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute; 
+  bottom: .2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: auto;
 }
 
 @media screen and (max-width:600px){
@@ -61,5 +62,12 @@
   .article{
     width: calc(100% - 2rem);
     display: block;
+  }
+
+  .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 2rem);
   }
 }

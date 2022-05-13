@@ -48,17 +48,15 @@ const Home: React.FC<NextPage> = () => {
                 </p>
             </Project>
             <div
-                className={`${styles.banner} ${styles.shadow} ${styles.round}`}
+                className={`${styles.footer} ${styles.banner} ${styles.shadow} ${styles.round}`}
             >
-                <div className={`${styles.footer} ${styles.raleway}`}>
-                    <a
-                        href="https://github.com/tobyrushton/tobyrushton.com"
-                        rel="noreferrer"
-                        target="_blank"
-                    >
-                        View this site on Github
-                    </a>
-                </div>
+                <a
+                    href="https://github.com/tobyrushton/tobyrushton.com"
+                    rel="noreferrer"
+                    target="_blank"
+                >
+                    View this site on Github
+                </a>
             </div>
         </div>
     )
