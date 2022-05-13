@@ -47,6 +47,13 @@
   display: inline-block;
 }
 
+.footer{
+  padding: .25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width:600px){
   .header{
     height: 7rem;
