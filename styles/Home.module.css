@@ -30,7 +30,7 @@
 }
 
 .textBox{
-  padding: .5rem;
+  padding: .25rem;
   margin-left: .5rem;
 }
 
@@ -38,8 +38,21 @@
   height: 20rem;
 }
 
+.article{
+  position: relative;
+  width: calc(50% - 2rem);
+  margin: 1rem;
+  color: white;
+  background-color:#121212;
+  display: inline-block;
+}
+
 @media screen and (max-width:600px){
   .header{
-    height: 10rem;
+    height: 7rem;
+  }
+  .article{
+    width: calc(100% - 2rem);
+    display: block;
   }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import type { NextPage } from 'next'
 import styles from '../styles/Home.module.css'
 import ThreeBanner from '../components/threeJS/threeBanner'
+import Project from '../components/project'
 
 const Home: React.FC<NextPage> = () => {
     return (
@@ -22,6 +23,33 @@ const Home: React.FC<NextPage> = () => {
                     <p>For now view my current projects</p>
                 </div>
             </div>
+            <Project
+                title="Worldle Unlimited"
+                link="https://worldleunlimited.co.uk/"
+                sourceLink="https://github.com/tobyrushton/worldle-unlimited"
+            >
+                <p>
+                    Worldle Unlimited is a world guessing game based on the
+                    popular game Worldle and similar to Wordle.
+                </p>
+                <p>
+                    It is built in React using typescript. It uses the context
+                    api to manage state and uses local storage in order to
+                    perist state across sessions.
+                </p>
+            </Project>
+            <Project
+                title="Sort-Search Visualiser"
+                link="https://tobyrushton.github.io/sort-search-visualiser/"
+                sourceLink="https://github.com/tobyrushton/sort-search-visualiser"
+            >
+                <p>This project is a sort and search algorithm visualiser.</p>
+                <p>
+                    It is built in React and using javascript. Redux toolkit was
+                    used in order to manage state. With this project I learned
+                    about different algorithms and how to implement them.
+                </p>
+            </Project>
         </div>
     )
 }
