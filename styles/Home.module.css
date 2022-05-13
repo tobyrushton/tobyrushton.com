@@ -33,3 +33,13 @@
   padding: .5rem;
   margin-left: .5rem;
 }
+
+.header{
+  height: 20rem;
+}
+
+@media screen and (max-width:600px){
+  .header{
+    height: 10rem;
+  }
+}
