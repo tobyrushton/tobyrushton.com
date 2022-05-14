@@ -2,3 +2,8 @@
 *.svg
 *.json
 *.ico
+*.css
+*.eslintignore
+*.prettierignore
+*.prettierrc
+*.md
