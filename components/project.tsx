@@ -11,7 +11,7 @@ interface props {
 const Project: React.FC<props> = ({ title, link, sourceLink, children }) => {
     return (
         <div className={`${styles.article} ${styles.round} ${styles.shadow}`}>
-            <div className={`${styles.textBox} ${styles.roboto}`}>
+            <div className={`${styles.textBox} ${styles.raleway}`}>
                 <h2>{title}</h2>
                 {children}
                 <a href={link} target="_blank" rel="noreferrer">
