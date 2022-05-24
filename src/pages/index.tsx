@@ -39,7 +39,7 @@ const Home: React.FC<NextPage> = () => {
                 <Project
                     title="Sort-Search Visualiser"
                     link="https://sort-search.tobyrushton.com"
-                    sourceLink="https://sort-search.tobyrushton.com"
+                    sourceLink="https://github.com/tobyrushton/sort-search-visualiser"
                 >
                     <p>
                         This project is a sort and search algorithm visualiser.
