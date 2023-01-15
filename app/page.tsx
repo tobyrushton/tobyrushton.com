@@ -1,10 +1,12 @@
+import 'server-only'
+
 import React from 'react'
 import type { NextPage } from 'next'
 import styles from '../styles/Home.module.css'
 import ThreeBanner from '../components/threeJS/threeBanner'
 import Project from '../components/project'
 
-const Home: React.FC<NextPage> = () => {
+const Page: React.FC<NextPage> = () => {
     return (
         <div className={styles.wrapper}>
             <div
@@ -70,4 +72,4 @@ const Home: React.FC<NextPage> = () => {
         </div>
     )
 }
-export default Home
+export default Page
