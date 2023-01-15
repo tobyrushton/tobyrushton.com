@@ -1,3 +1,5 @@
+'use client'
+
 import * as THREE from 'three'
 import React, { useRef } from 'react'
 import { PerspectiveCamera, Text } from '@react-three/drei'
