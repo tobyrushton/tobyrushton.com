@@ -68,6 +68,13 @@ const Page: React.FC<NextPage> = () => {
                 >
                     View this site on Github
                 </a>
+                <a
+                    href="https://github.com/tobyrushton"
+                    rel="noreferrer"
+                    target="_blank"
+                >
+                    Github Profile
+                </a>
             </div>
         </div>
     )
