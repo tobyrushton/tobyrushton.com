@@ -32,11 +32,7 @@ const Page: React.FC<NextPage> = () => {
                         Worldle Unlimited is a world guessing game based on the
                         popular game Worldle and similar to Wordle.
                     </p>
-                    <p>
-                        It is built in React using typescript. It uses the
-                        context api to manage state and uses local storage in
-                        order to perist state across sessions.
-                    </p>
+                    <p>It is built in React with Typescript.</p>
                 </Project>
                 <Project
                     title="Sort-Search Visualiser"
@@ -44,13 +40,12 @@ const Page: React.FC<NextPage> = () => {
                     sourceLink="https://github.com/tobyrushton/sort-search-visualiser"
                 >
                     <p>
-                        This project is a sort and search algorithm visualiser.
+                        This project is a web application that visualises
+                        different sort and search algorithms.
                     </p>
                     <p>
-                        It is built in React and using javascript. Redux toolkit
-                        was used in order to manage state. With this project I
-                        learned about different algorithms and how to implement
-                        them.
+                        It is built in React with Javascript and uses Redux
+                        toolkit in order to manage state.
                     </p>
                 </Project>
             </div>
