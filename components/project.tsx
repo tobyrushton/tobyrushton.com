@@ -13,13 +13,16 @@ interface props {
 const Project: React.FC<props> = ({ title, link, sourceLink, children }) => {
     return (
         <div className={`${styles.article} ${styles.round} ${styles.shadow}`}>
-            <div className={`${styles.textBox} ${styles.raleway}`}>
+            <div
+                className={`${styles.textBox} ${styles.raleway}`}
+                style={{ display: 'flex', flexDirection: 'column', flex: '1' }}
+            >
                 <h2>{title}</h2>
                 {children}
-                <a href={link} target="_blank" rel="noreferrer">
-                    {link}
-                </a>
-                <div>
+                <div className={styles.anchorWrapper}>
+                    <a href={link} target="_blank" rel="noreferrer">
+                        {link}
+                    </a>
                     <a href={sourceLink} target="_blank" rel="noreferrer">
                         View on Github!
                     </a>
