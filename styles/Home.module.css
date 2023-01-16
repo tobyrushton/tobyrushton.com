@@ -5,6 +5,9 @@
     height: 100%;
     width: 100%;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
 }
 
 .banner {
@@ -44,22 +47,41 @@
     color: white;
     background-color: #121212;
     flex: 1;
+    padding-bottom: 0.25rem;
+    display: flex;
+}
+
+.anchorWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: auto;
+}
+
+.anchorWrapper a {
+    width: fit-content;
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    padding-left: 1rem;
+    margin-top: auto;
+    padding: 0.2rem 1rem;
+    display: flex;
+}
+
+.footer a:last-child {
+    margin-left: auto;
 }
 
 .articleContainer {
     display: flex;
+    flex: 1;
 }
 
 @media screen and (max-width: 600px) {
     .header {
         height: 7rem;
     }
+
     .article {
         width: calc(100% - 2rem);
     }
@@ -69,24 +91,15 @@
     }
 
     .footer {
-        display: flex;
         justify-content: center;
         align-items: center;
     }
-}
 
-@media screen and (max-height: 875px) {
-    .wrapper {
-        overflow-y: scroll;
+    .footer a:first-child {
+        display: none;
     }
 
-    .footer {
-        position: relative;
-    }
-}
-
-@media screen and (min-height: 800px) and (min-width: 600px) {
-    .footer {
-        position: absolute;
+    .footer a:last-child {
+        margin: 0;
     }
 }
