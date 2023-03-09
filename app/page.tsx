@@ -1,12 +1,11 @@
 import 'server-only'
 
-import React from 'react'
-import type { NextPage } from 'next'
+import { FC } from 'react'
 import styles from '../styles/Home.module.css'
 import ThreeBanner from '../components/threeJS/threeBanner'
 import Project from '../components/project'
 
-const Page: React.FC<NextPage> = () => {
+const Page: FC = () => {
     return (
         <div className={styles.wrapper}>
             <div
@@ -23,6 +22,21 @@ const Page: React.FC<NextPage> = () => {
                 </div>
             </div>
             <div className={styles.articleContainer}>
+                <Project
+                    title="UniFriend"
+                    link="https://unifriend.tobyrushton.com"
+                    sourceLink="https://github.com/tobyrushton/unifriend"
+                >
+                    <p>
+                        UniFriend is a web application that allows UK university
+                        students to find other university students. This project
+                        was built for my A Level Computer Science coursework.
+                    </p>
+                    <p>
+                        It is built with NextJS, using React, Typescript, SCSS,
+                        Apollo, GraphQL, Prisma and Nexus.
+                    </p>
+                </Project>
                 <Project
                     title="Worldle Unlimited"
                     link="https://worldleunlimited.co.uk/"
