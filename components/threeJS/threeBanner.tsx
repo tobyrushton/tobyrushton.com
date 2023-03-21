@@ -51,7 +51,7 @@ const ThreeBanner: React.FC = () => {
                 fov={40}
             />
             <Icosahedron position={[0, 0, 0]} />
-            <Text scale={[6, 6, 6]} position={[0, 0, -0]}>
+            <Text scale={[0.6, 0.6, 0.6]} position={[0, 0, -0]}>
                 tobyrushton
             </Text>
         </Canvas>
