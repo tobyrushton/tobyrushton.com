@@ -1,9 +1,14 @@
 import 'server-only'
 
 import { FC } from 'react'
+import type { Metadata } from 'next'
 import styles from '../styles/Home.module.css'
 import ThreeBanner from '../components/threeJS/threeBanner'
 import Project from '../components/project'
+
+export const generateMetadata = (): Metadata => ({
+    title: 'Toby Rushton',
+})
 
 const Page: FC = () => {
     return (
