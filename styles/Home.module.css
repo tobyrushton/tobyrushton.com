@@ -46,7 +46,7 @@
     margin: 1rem;
     color: white;
     background-color: #121212;
-    flex: 1;
+    flex: 0 1 auto;
     padding-bottom: 0.25rem;
     display: flex;
 }
@@ -75,9 +75,10 @@
 .articleContainer {
     display: flex;
     flex: 1;
+    flex-wrap: wrap;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .header {
         height: 7rem;
     }

@@ -20,7 +20,11 @@ const Project: React.FC<props> = ({ title, link, sourceLink, children }) => {
                 <h2>{title}</h2>
                 {children}
                 <div className={styles.anchorWrapper}>
-                    <a href={link} target="_blank" rel="noreferrer">
+                    <a
+                        href={`https://${link}`}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         {link}
                     </a>
                     <a href={sourceLink} target="_blank" rel="noreferrer">
