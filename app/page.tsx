@@ -27,6 +27,17 @@ const Page: FC = () => {
             </div>
             <div className={styles.articleContainer}>
                 <Project
+                    title="NBA Fantasy"
+                    link="nba-fantasy.tobyrushton.com"
+                    sourceLink="https://github.com/tobyrushton/nba-fantasy"
+                >
+                    <p>
+                        A simple NBA Fantasy application that allows for all
+                        current NBA players stats to be searched
+                    </p>
+                    <p>Built with NextJS, using React, Typescript and SCSS.</p>
+                </Project>
+                <Project
                     title="UniFriend"
                     link="unifriend.tobyrushton.com"
                     sourceLink="https://github.com/tobyrushton/unifriend"
