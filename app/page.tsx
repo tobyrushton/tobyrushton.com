@@ -1,14 +1,9 @@
 import 'server-only'
 
 import { FC } from 'react'
-import type { Metadata } from 'next'
 import styles from '../styles/Home.module.css'
 import ThreeBanner from '../components/threeJS/threeBanner'
 import Project from '../components/project'
-
-export const generateMetadata = (): Metadata => ({
-    title: 'Toby Rushton',
-})
 
 const Page: FC = () => {
     return (
@@ -22,14 +17,24 @@ const Page: FC = () => {
                 className={`${styles.banner} ${styles.shadow} ${styles.round}`}
             >
                 <div className={`${styles.textBox} ${styles.raleway}`}>
-                    <p>This site is currently in construction.</p>
-                    <p>For now view my current projects</p>
+                    <h2>Projects</h2>
                 </div>
             </div>
             <div className={styles.articleContainer}>
                 <Project
+                    title="NBA Fantasy"
+                    link="nba-fantasy.tobyrushton.com"
+                    sourceLink="https://github.com/tobyrushton/nba-fantasy"
+                >
+                    <p>
+                        A simple NBA Fantasy application that allows for all
+                        current NBA players stats to be searched
+                    </p>
+                    <p>Built with NextJS, using React, Typescript and SCSS.</p>
+                </Project>
+                <Project
                     title="UniFriend"
-                    link="https://unifriend.tobyrushton.com"
+                    link="unifriend.tobyrushton.com"
                     sourceLink="https://github.com/tobyrushton/unifriend"
                 >
                     <p>
@@ -44,7 +49,7 @@ const Page: FC = () => {
                 </Project>
                 <Project
                     title="Worldle Unlimited"
-                    link="https://worldleunlimited.co.uk/"
+                    link="worldleunlimited.co.uk"
                     sourceLink="https://github.com/tobyrushton/worldle-unlimited"
                 >
                     <p>
@@ -55,7 +60,7 @@ const Page: FC = () => {
                 </Project>
                 <Project
                     title="Sort-Search Visualiser"
-                    link="https://sort-search.tobyrushton.com"
+                    link="sort-search.tobyrushton.com"
                     sourceLink="https://github.com/tobyrushton/sort-search-visualiser"
                 >
                     <p>
