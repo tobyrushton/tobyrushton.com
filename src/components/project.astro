@@ -1,0 +1,28 @@
+---
+interface Props {
+    title: string
+    link: string
+    sourceLink: string
+}
+
+const { title, link, sourceLink } = Astro.props
+---
+
+<div>
+    <div>
+        <h2>{title}</h2>
+        <slot />
+        <div>
+            <a
+                href={`https://${link}`}
+                target="_blank"
+                rel="noreferrer"
+            >
+                {link}
+            </a>
+            <a href={sourceLink} target="_blank" rel="noreferrer">
+                View on Github!
+            </a>
+        </div>
+    </div>
+</div>

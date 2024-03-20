@@ -1,26 +1,26 @@
-import 'server-only'
+---
+import Project from '../components/project.astro'
+---
 
-import { FC } from 'react'
-import styles from '../styles/Home.module.css'
-import ThreeBanner from '../components/threeJS/threeBanner'
-import Project from '../components/project'
-
-const Page: FC = () => {
-    return (
-        <div className={styles.wrapper}>
-            <div
-                className={`${styles.header} ${styles.banner} ${styles.shadow} ${styles.round}`}
-            >
-                <ThreeBanner />
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<div>
+            <div>
+				Hi, I'm Toby Rushton.
             </div>
-            <div
-                className={`${styles.banner} ${styles.shadow} ${styles.round}`}
-            >
-                <div className={`${styles.textBox} ${styles.raleway}`}>
+            <div>
+                <div>
                     <h2>Projects</h2>
                 </div>
             </div>
-            <div className={styles.articleContainer}>
+            <div>
                 <Project
                     title="NBA Fantasy"
                     link="nba-fantasy.tobyrushton.com"
@@ -73,13 +73,7 @@ const Page: FC = () => {
                     </p>
                 </Project>
             </div>
-            <div
-                className={`${styles.footer} ${styles.banner} ${styles.shadow}`}
-                style={{
-                    width: '100%',
-                    margin: '0',
-                }}
-            >
+            <div>
                 <a
                     href="https://github.com/tobyrushton/tobyrushton.com"
                     rel="noreferrer"
@@ -96,6 +90,5 @@ const Page: FC = () => {
                 </a>
             </div>
         </div>
-    )
-}
-export default Page
+	</body>
+</html>
