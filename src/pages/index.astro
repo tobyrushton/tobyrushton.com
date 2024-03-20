@@ -1,5 +1,6 @@
 ---
 import Project from '../components/project.astro'
+import '@fontsource-variable/raleway'
 ---
 
 <html lang="en">
@@ -11,73 +12,84 @@ import Project from '../components/project.astro'
 		<title>Astro</title>
 	</head>
 	<body>
-		<div>
-            <div>
-				Hi, I'm Toby Rushton.
-            </div>
-            <div>
-                <div>
-                    <h2>Projects</h2>
+        <div class="flex flex-col w-screen min-h-screen text-white bg-bg">
+            <main class="flex flex-col grow">
+                <div class="flex flex-col bg-fg p-10 gap-2">
+                    <h1 class="text-xl font-medium text-[#A7A8AA]">
+                        Hi, I'm Toby
+                    </h1>
+                     <h2 class="text-3xl max-w-5xl font-medium">
+                        I'm currently in my first year at the University of Leeds, pursuing a BSc in Computer Science.
+                     </h2>
+                     <h3 class="text-lg font-medium text-[#A7A8AA] max-w-5xl">
+                        I'm a full-stack developer with a passion for creating web applications.
+                        I'm particularly interested in Next, tRPC, Prisma, Tailwind and Typescript.
+                        However, I'm always looking to learn new technologies and improve my skills.
+                     </h3>
                 </div>
-            </div>
-            <div>
-                <Project
-                    title="NBA Fantasy"
-                    link="nba-fantasy.tobyrushton.com"
-                    sourceLink="https://github.com/tobyrushton/nba-fantasy"
-                >
-                    <p>
-                        A simple NBA Fantasy application that allows for all
-                        current NBA players stats to be searched
-                    </p>
-                    <p>Built with NextJS, using React, Typescript and SCSS.</p>
-                </Project>
-                <Project
-                    title="UniFriend"
-                    link="unifriend.tobyrushton.com"
-                    sourceLink="https://github.com/tobyrushton/unifriend"
-                >
-                    <p>
-                        UniFriend is a web application that allows UK university
-                        students to find other university students. This project
-                        was built for my A Level Computer Science coursework.
-                    </p>
-                    <p>
-                        It is built with NextJS, using React, Typescript, SCSS,
-                        Apollo, GraphQL, Prisma and Nexus.
-                    </p>
-                </Project>
-                <Project
-                    title="Worldle Unlimited"
-                    link="worldleunlimited.co.uk"
-                    sourceLink="https://github.com/tobyrushton/worldle-unlimited"
-                >
-                    <p>
-                        Worldle Unlimited is a world guessing game based on the
-                        popular game Worldle and similar to Wordle.
-                    </p>
-                    <p>It is built in React with Typescript.</p>
-                </Project>
-                <Project
-                    title="Sort-Search Visualiser"
-                    link="sort-search.tobyrushton.com"
-                    sourceLink="https://github.com/tobyrushton/sort-search-visualiser"
-                >
-                    <p>
-                        This project is a web application that visualises
-                        different sort and search algorithms.
-                    </p>
-                    <p>
-                        It is built in React with Javascript and uses Redux
-                        toolkit in order to manage state.
-                    </p>
-                </Project>
-            </div>
-            <div>
+                <div class="grid gap-4 p-4 grid-cols-1 md:grid-cols-2">
+                    <h2 class="text-xl pl-5 py-2 md:col-span-2">
+                        My Projects
+                    </h2>
+                    <Project
+                        title="NBA Fantasy"
+                        link="nba-fantasy.tobyrushton.com"
+                        sourceLink="https://github.com/tobyrushton/nba-fantasy"
+                    >
+                        <p>
+                            A simple NBA Fantasy application that allows for all
+                            current NBA players stats to be searched
+                        </p>
+                        <p>Built with NextJS, using React, Typescript and SCSS.</p>
+                    </Project>
+                    <Project
+                        title="UniFriend"
+                        link="unifriend.tobyrushton.com"
+                        sourceLink="https://github.com/tobyrushton/unifriend"
+                    >
+                        <p>
+                            UniFriend is a web application that allows UK university
+                            students to find other university students. This project
+                            was built for my A Level Computer Science coursework.
+                        </p>
+                        <p>
+                            It is built with NextJS, using React, Typescript, SCSS,
+                            Apollo, GraphQL, Prisma and Nexus.
+                        </p>
+                    </Project>
+                    <Project
+                        title="Worldle Unlimited"
+                        link="worldleunlimited.co.uk"
+                        sourceLink="https://github.com/tobyrushton/worldle-unlimited"
+                    >
+                        <p>
+                            Worldle Unlimited is a world guessing game based on the
+                            popular game Worldle and similar to Wordle.
+                        </p>
+                        <p>It is built in React with Typescript.</p>
+                    </Project>
+                    <Project
+                        title="Sort-Search Visualiser"
+                        link="sort-search.tobyrushton.com"
+                        sourceLink="https://github.com/tobyrushton/sort-search-visualiser"
+                    >
+                        <p>
+                            This project is a web application that visualises
+                            different sort and search algorithms.
+                        </p>
+                        <p>
+                            It is built in React with Javascript and uses Redux
+                            toolkit in order to manage state.
+                        </p>
+                    </Project>
+                </div>
+            </main>
+            <div class="flex bg-fg w-full p-2 justify-between">
                 <a
                     href="https://github.com/tobyrushton/tobyrushton.com"
                     rel="noreferrer"
                     target="_blank"
+                    class="underline"
                 >
                     View this site on Github
                 </a>
@@ -85,6 +97,7 @@ import Project from '../components/project.astro'
                     href="https://github.com/tobyrushton"
                     rel="noreferrer"
                     target="_blank"
+                    class="underline"
                 >
                     Github Profile
                 </a>
