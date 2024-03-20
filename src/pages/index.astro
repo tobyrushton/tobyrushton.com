@@ -1,5 +1,6 @@
 ---
 import Project from '../components/project.astro'
+import { Linkedin, Github } from 'lucide-astro'
 import '@fontsource-variable/raleway'
 ---
 
@@ -26,6 +27,24 @@ import '@fontsource-variable/raleway'
                         I'm particularly interested in Next, tRPC, Prisma, Tailwind and Typescript.
                         However, I'm always looking to learn new technologies and improve my skills.
                      </h3>
+                     <div class="flex gap-2 pt-2 text-[#A7A8AA]">
+                        <a
+                            href="https://github.com/tobyrushton"
+                            target="_blank"
+                            rel="noopener"
+                            class="hover:text-[#FFA500]"
+                        >
+                            <Github size="24" />
+                        </a>
+                        <a
+                        href="https://www.linkedin.com/in/toby-rushton-3698372b7/"
+                        target="_blank"
+                        rel="noopener"
+                        class="hover:text-[#FFA500]"
+                        >
+                            <Linkedin size="24" />
+                        </a>
+                     </div>
                 </div>
                 <div class="grid gap-4 p-4 grid-cols-1 md:grid-cols-2">
                     <h2 class="text-xl pl-5 py-2 md:col-span-2">
@@ -84,24 +103,6 @@ import '@fontsource-variable/raleway'
                     </Project>
                 </div>
             </main>
-            <div class="flex bg-fg w-full p-2 justify-between">
-                <a
-                    href="https://github.com/tobyrushton/tobyrushton.com"
-                    rel="noreferrer"
-                    target="_blank"
-                    class="underline"
-                >
-                    View this site on Github
-                </a>
-                <a
-                    href="https://github.com/tobyrushton"
-                    rel="noreferrer"
-                    target="_blank"
-                    class="underline"
-                >
-                    Github Profile
-                </a>
-            </div>
         </div>
 	</body>
 </html>
