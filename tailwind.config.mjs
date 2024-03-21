@@ -11,6 +11,7 @@ export default {
             colors: {
                 bg: '#0c0c0c',
                 fg: '#121212',
+                'text-secondary': '#A7A8AA',
             },
         },
     },

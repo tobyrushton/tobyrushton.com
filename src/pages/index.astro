@@ -10,24 +10,24 @@ import '@fontsource-variable/raleway'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Toby</title>
 	</head>
 	<body>
         <div class="flex flex-col w-screen min-h-screen text-white bg-bg">
             <main class="flex flex-col grow">
                 <div class="flex flex-col bg-fg p-10 gap-2">
-                    <h1 class="text-xl font-medium text-[#A7A8AA]">
-                        Hi, I'm Toby
+                    <h1 class="text-xl font-medium text-text-secondary">
+                        Hi, I'm Toby.
                     </h1>
                      <h2 class="text-3xl max-w-5xl font-medium">
                         I'm currently in my first year at the University of Leeds, pursuing a BSc in Computer Science.
                      </h2>
-                     <h3 class="text-lg font-medium text-[#A7A8AA] max-w-5xl">
+                     <h3 class="text-lg font-medium text-text-secondary max-w-5xl">
                         I'm a full-stack developer with a passion for creating web applications.
                         I'm particularly interested in Next, tRPC, Prisma, Tailwind and Typescript.
                         However, I'm always looking to learn new technologies and improve my skills.
                      </h3>
-                     <div class="flex gap-2 pt-2 text-[#A7A8AA]">
+                     <div class="flex gap-2 pt-2 text-text-secondary">
                         <a
                             href="https://github.com/tobyrushton"
                             target="_blank"
@@ -46,52 +46,27 @@ import '@fontsource-variable/raleway'
                         </a>
                      </div>
                 </div>
-                <div class="grid gap-4 p-4 grid-cols-1 md:grid-cols-2">
-                    <h2 class="text-xl pl-5 py-2 md:col-span-2">
+                <div class="grid gap-4 p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                    <h2 class="text-xl pl-5 py-2 sm:col-span-2 md:col-span-3">
                         My Projects
                     </h2>
                     <Project
                         title="Nuggets Center"
-                        link="nuggetscenter.xyz"
-                        sourceLink="https://github.com/tobyrushton/nuggets-center"
+                        link="https://nuggetscenter.xyz"
                     >
-                        <p>
-                            Nuggets Center is a web application that provides
-                            information including box scores, schedule, stat leaders
-                            and more about the Denver Nuggets.
-                        </p>
-                        <p>
-                            It is built in Next.js with Typescript and uses tRPC
-                            to handle server-side logic. Additionally, the Serverless
-                            Framework is used to deploy scheduled lambdas to AWS for 
-                            data fetching. 
-                            
-                        </p>
+                        Next, tRPC, Prisma, Tailwind, Typescript, Serverless Framework
                     </Project>
                     <Project
                         title="Worldle Unlimited"
-                        link="worldleunlimited.co.uk"
-                        sourceLink="https://github.com/tobyrushton/worldle-unlimited"
+                        link="https://worldleunlimited.co.uk"
                     >
-                        <p>
-                            Worldle Unlimited is a world guessing game based on the
-                            popular game Worldle and similar to Wordle.
-                        </p>
-                        <p>It is built in React with Typescript.</p>
+                        React, Typescript
                     </Project>
                     <Project
                         title="Sort-Search Visualiser"
-                        link="sort-search.tobyrushton.com"
-                        sourceLink="https://github.com/tobyrushton/sort-search-visualiser"
+                        link="https://sort-search.tobyrushton.com"
                     >
-                        <p>
-                            This project is a web application that visualises
-                            different sort and search algorithms.
-                        </p>
-                        <p>
-                            It is built in React with Javascript and uses Redux
-                            toolkit in order to manage state.
-                        </p>
+                        React, Javascript, Redux Toolkit
                     </Project>
                 </div>
             </main>
