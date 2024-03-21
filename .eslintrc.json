@@ -4,7 +4,6 @@
         "es2021": true
     },
     "extends": [
-        "airbnb",
         "plugin:@typescript-eslint/recommended",
         "prettier",
         "plugin:prettier/recommended",
@@ -16,7 +15,20 @@
         "ecmaVersion": 12,
         "sourceType": "module"
     },
-    "plugins": ["@typescript-eslint"],
+    "overrides": [
+        {
+            "files": ["*.astro"],
+            "parser": "astro-eslint-parser",
+            "parserOptions": {
+                "parser": "@typescript-eslint/parser",
+                "extraFileExtensions": [".astro"]
+            },
+            "rules": {
+                "prettier/prettier": "off"
+            }
+        }
+    ],
+    "plugins": ["@typescript-eslint", "import"],
     "rules": {
         "no-plusplus": "off",
         "no-nested-ternary": "off",
@@ -44,15 +56,7 @@
                 "code": 100
             }
         ],
-        "import/prefer-default-export": "off",
-        "react/prop-types": "off",
-        "react/function-component-definition": [
-            2,
-            {
-                "namedComponents": "arrow-function",
-                "unnamedComponents": "arrow-function"
-            }
-        ]
+        "import/prefer-default-export": "off"
     },
     "settings": {
         "import/resolver": {
