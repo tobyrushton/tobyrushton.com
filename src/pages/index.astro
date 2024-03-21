@@ -1,0 +1,76 @@
+---
+import Project from '../components/project.astro'
+import { Linkedin, Github } from 'lucide-astro'
+import '@fontsource-variable/raleway'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Toby</title>
+	</head>
+	<body>
+        <div class="flex flex-col w-screen min-h-screen text-white bg-bg">
+            <main class="flex flex-col grow">
+                <div class="flex flex-col bg-fg p-10 gap-2">
+                    <h1 class="text-xl font-medium text-text-secondary">
+                        Hi, I'm Toby.
+                    </h1>
+                     <h2 class="text-3xl max-w-5xl font-medium">
+                        I'm currently in my first year at the University of Leeds, 
+                        pursuing a BSc in Computer Science.
+                     </h2>
+                     <h3 class="text-lg font-medium text-text-secondary max-w-5xl">
+                        I'm a full-stack developer with a passion for creating web applications.
+                        I'm particularly interested in Next, tRPC, Prisma, Tailwind and Typescript.
+                        However, I'm always looking to learn new technologies and improve my skills.
+                     </h3>
+                     <div class="flex gap-2 pt-2 text-text-secondary">
+                        <a
+                            href="https://github.com/tobyrushton"
+                            target="_blank"
+                            rel="noopener"
+                            class="hover:text-[#FFA500]"
+                        >
+                            <Github size="24" />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/toby-rushton-3698372b7/"
+                            target="_blank"
+                            rel="noopener"
+                            class="hover:text-[#FFA500]"
+                        >
+                            <Linkedin size="24" />
+                        </a>
+                     </div>
+                </div>
+                <div class="grid gap-4 p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                    <h2 class="text-xl pl-5 py-2 sm:col-span-2 md:col-span-3">
+                        My Projects
+                    </h2>
+                    <Project
+                        title="Nuggets Center"
+                        link="https://nuggetscenter.xyz"
+                    >
+                        Next, tRPC, Prisma, Tailwind, Typescript, Serverless Framework
+                    </Project>
+                    <Project
+                        title="Worldle Unlimited"
+                        link="https://worldleunlimited.co.uk"
+                    >
+                        React, Typescript
+                    </Project>
+                    <Project
+                        title="Sort-Search Visualiser"
+                        link="https://sort-search.tobyrushton.com"
+                    >
+                        React, Javascript, Redux Toolkit
+                    </Project>
+                </div>
+            </main>
+        </div>
+	</body>
+</html>

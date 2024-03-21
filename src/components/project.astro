@@ -1,0 +1,24 @@
+---
+import { ExternalLink } from 'lucide-astro'
+
+interface Props {
+    title: string
+    link: string
+}
+
+const { title, link } = Astro.props
+---
+
+<a 
+    class="flex flex-col gap-2 hover:bg-fg hover:cursor-pointer rounded p-4 shadow-lg"
+    href={link}
+    target="_blank"
+>
+    <span class="flex justify-between">
+        <h2 class="text-xl font-medium">{title}</h2>
+        <ExternalLink class="text-text-secondary" size="16" />
+    </span>
+    <p class="text-text-secondary">
+        <slot />
+    </p>
+</a>
