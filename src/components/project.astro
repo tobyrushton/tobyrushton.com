@@ -18,10 +18,11 @@ const { title, link, repository } = Astro.props
         <span class="flex gap-2 text-text-secondary">
             <Link 
                 href={`https://github.com/${repository}`}
+                alt={`Link to ${title} repository on GitHub`}
             >
                 <Github size="16" />
             </Link>
-            <Link href={link}>
+            <Link href={link} alt={`Link to ${title} website`}>
                 <ExternalLink size="16" /> 
             </Link>
         </span>
