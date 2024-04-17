@@ -56,7 +56,8 @@
                 "code": 100
             }
         ],
-        "import/prefer-default-export": "off"
+        "import/prefer-default-export": "off",
+        "@typescript-eslint/triple-slash-reference": "off"
     },
     "settings": {
         "import/resolver": {

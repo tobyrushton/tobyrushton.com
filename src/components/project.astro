@@ -1,24 +1,33 @@
 ---
-import { ExternalLink } from 'lucide-astro'
+import { ExternalLink, Github } from 'lucide-astro'
+import Link from './link.astro'
 
 interface Props {
     title: string
     link: string
+    repository: string
 }
 
-const { title, link } = Astro.props
+const { title, link, repository } = Astro.props
 ---
-
-<a 
-    class="flex flex-col gap-2 hover:bg-fg hover:cursor-pointer rounded p-4 shadow-lg"
-    href={link}
-    target="_blank"
+<div
+    class="flex flex-col gap-2 hover:bg-fg rounded p-4 shadow-lg"
 >
     <span class="flex justify-between">
         <h2 class="text-xl font-medium">{title}</h2>
-        <ExternalLink class="text-text-secondary" size="16" />
+        <span class="flex gap-2 text-text-secondary">
+            <Link 
+                href={`https://github.com/${repository}`}
+                alt={`Link to ${title} repository on GitHub`}
+            >
+                <Github size="16" />
+            </Link>
+            <Link href={link} alt={`Link to ${title} website`}>
+                <ExternalLink size="16" /> 
+            </Link>
+        </span>
     </span>
     <p class="text-text-secondary">
         <slot />
     </p>
-</a>
+</div>
