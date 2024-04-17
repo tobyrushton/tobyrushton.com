@@ -1,6 +1,8 @@
 ---
 import Project from '../components/project.astro'
+import Link from '../components/link.astro'
 import { Linkedin, Github } from 'lucide-astro'
+import projects from '../projects.json'
 import '@fontsource-variable/raleway'
 ---
 
@@ -29,52 +31,39 @@ import '@fontsource-variable/raleway'
                         However, I'm always looking to learn new technologies and improve my skills.
                      </h3>
                      <div class="flex gap-2 pt-2 text-text-secondary">
-                        <a
+                        <Link
                             href="https://github.com/tobyrushton"
-                            target="_blank"
-                            rel="noopener"
-                            class="hover:text-[#FFA500]"
                         >
                             <Github size="24" />
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             href="https://www.linkedin.com/in/tobyrushton/"
-                            target="_blank"
-                            rel="noopener"
-                            class="hover:text-[#FFA500]"
                         >
                             <Linkedin size="24" />
-                        </a>
+                        </Link>
                      </div>
                 </div>
                 <div class="grid gap-4 p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                     <h2 class="text-xl pl-5 py-2 sm:col-span-2 md:col-span-3">
                         My Projects
                     </h2>
-                    <Project
-                        title="Nuggets Center"
-                        link="https://nuggetscenter.xyz"
-                    >
-                        Next, tRPC, Prisma, Tailwind, Typescript, Serverless Framework
-                    </Project>
-                    <Project
-                        title="Worldle Unlimited"
-                        link="https://worldleunlimited.co.uk"
-                    >
-                        React, Typescript
-                    </Project>
-                    <Project
-                        title="Sort-Search Visualiser"
-                        link="https://sort-search.tobyrushton.com"
-                    >
-                        React, Javascript, Redux Toolkit
-                    </Project>
+                    {
+                        projects.map((project) => (
+                            <Project
+                                title={project.name}
+                                link={project.link}
+                                repository={project.repository}
+                            >
+                                {project.description}
+                            </Project>
+                        ))
+                    }
                 </div>
             </main>
             <footer>
                 <div class="p-6 text-text-secondary text-xs">
                     <p>
-                        © Toby Rushton {new Date().getFullYear()}
+                        © {new Date().getFullYear()} Toby Rushton
                     </p>
                 </div>
             </footer>
