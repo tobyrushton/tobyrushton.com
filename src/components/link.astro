@@ -11,7 +11,7 @@ interface Props {
 const { href, class: className, alt, blank = true } = Astro.props
 ---
 <a 
-    class={cn('hover:text-[#FFA500]', className)}
+    class={cn('hover:text-accent', className)}
     href={href}
     target={blank ? "_blank" : undefined}
     aria-label={alt}

@@ -6,6 +6,7 @@ import Link from '../../components/link.astro'
 import dayjs from 'dayjs'
 import Layout from '../../layouts/Layout.astro'
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const getStaticPaths = async () => {
     const posts: MarkdownInstance<Record<string, string>>[] = await Astro.glob("../../posts/*.md")
 
@@ -74,7 +75,7 @@ const { post } = Astro.props
         @apply text-zinc-400 mt-4 border-l-2 border-zinc-300 pl-4 text-base;
     }
     :global(#md a) {
-        @apply underline hover:text-black;
+        @apply underline hover:text-accent;
     }
     :global(#md p code, #md ul code, #md ol code) {
 		@apply text-base;
