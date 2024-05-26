@@ -15,12 +15,12 @@ const posts = await Astro.glob("../posts/*.md")
                 Hi, I'm Toby.
             </h1>
                 <h2 class="text-3xl max-w-5xl font-medium">
-                I'm currently an undergrad computer science student at the University of Leeds, graduating in 2026.
+                    I'm currently completing a BSc in Computer Science at the University of Leeds, graduating in 2026.
                 </h2>
                 <h3 class="text-lg font-medium text-text-secondary max-w-5xl">
-                Creating web applications is a passion of mine, and as a full-stack developer, I have experience with Next, tRPC, Prisma, Tailwind, and Typescript.
-                However, I love learning new technologies and am always looking to expand my skillset. 
-                I'm currently using Go as part of my latest project and really starting to love it.
+                    Creating web applications is a passion of mine, and as a full-stack developer, I have experience with Next, tRPC, Prisma, Tailwind, and Typescript.
+                    However, I love learning new technologies and am always looking to expand my skillset. 
+                    I'm currently learning Go and exploring how I can use this in my projects.
                 </h3>
                 <div class="flex gap-2 pt-2 text-text-secondary">
                     <Link
@@ -37,8 +37,8 @@ const posts = await Astro.glob("../posts/*.md")
                 </Link>
                 </div>
         </div>
-        <div class="grid gap-4 p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-            <h2 class="text-xl pl-5 py-2 sm:col-span-2 md:col-span-3">
+        <div class="grid gap-4 p-4 grid-cols-1 sm:grid-cols-2">
+            <h2 class="text-xl p-2 sm:col-span-2">
                 My Projects
             </h2>
             {
@@ -54,13 +54,13 @@ const posts = await Astro.glob("../posts/*.md")
             }
         </div>
         <div class="flex flex-col gap-4 p-4 ">
-            <h2 class="text-xl pl-5 py-2">
+            <h2 class="text-xl p-2">
                 Blog
             </h2>
             {
                 posts.map((post) => (
                     <article class="flex flex-col gap-2 p-4">
-                        <a href={`/blog/${post.frontmatter.slug}`}>
+                        <a class="hover:underline hover:text-accent" href={`/blog/${post.frontmatter.slug}`}>
                             <h3 class="text-lg font-medium">
                                 {post.frontmatter.title}
                             </h3>
