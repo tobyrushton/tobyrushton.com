@@ -1,5 +1,17 @@
 [
     {
+        "name": "Railopedia",
+        "link": "https://railopedia.com",
+        "description": "Go, Rod, Astro, Svelte, Typescript, Tailwind, SST",
+        "repository": "tobyrushton/railopedia"
+    },
+    {
+        "name": "PlaylistPal",
+        "link": "https://playlistpal.tobyrushton.com",
+        "description": "Go, HTMX, Templ, Chi, Tailwind",
+        "repository": "tobyrushton/playlistpal"
+    },
+    {
         "name": "Nuggets Center",
         "link": "https://nuggetscenter.xyz",
         "description": "Next, tRPC, Prisma, Tailwind, Typescript, Serverless Framework",
