@@ -3,13 +3,11 @@ import Layout from '../layouts/Layout.astro'
 import Project from '../components/project.astro'
 import Link from '../components/link.astro'
 import { Linkedin, Github } from 'lucide-astro'
-import dayjs from 'dayjs'
+import { getCollection } from 'astro:content'
 import projects from '../projects.json'
 import '@fontsource-variable/raleway'
 
-const posts = (await Astro.glob("../posts/*.md")).sort((a, b) => 
-    dayjs(b.frontmatter.date).unix() - dayjs(a.frontmatter.date).unix()
-)
+const posts = await getCollection('blog')
 ---
 <Layout title="Hi, I'm Toby" description="Hi, I'm Toby, a Computer Science student at the University of Leeds.">
     <main class="flex flex-col grow">
@@ -61,15 +59,15 @@ const posts = (await Astro.glob("../posts/*.md")).sort((a, b) =>
                 Blog
             </h2>
             {
-                posts.map((post) => (
+                posts.map(post => (
                     <article class="flex flex-col gap-2 p-4">
-                        <a class="hover:underline hover:text-accent" href={`/blog/${post.frontmatter.slug}`}>
+                        <a class="hover:underline hover:text-accent" href={`/blog/${post.data.slug}`}>
                             <h3 class="text-lg font-medium">
-                                {post.frontmatter.title}
+                                {post.data.title}
                             </h3>
                         </a>
                         <p class="text-sm text-text-secondary">
-                            {post.frontmatter.description}
+                            {post.data.description}
                         </p>
                     </article>
                 ))

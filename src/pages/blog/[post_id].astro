@@ -1,30 +1,27 @@
 ---
-import type { MarkdownInstance } from 'astro'
 import type { InferGetStaticPropsType } from 'astro'
 import { Github, Home } from 'lucide-astro'
 import Link from '../../components/link.astro'
 import dayjs from 'dayjs'
 import Layout from '../../layouts/Layout.astro'
+import { getCollection, render } from 'astro:content'
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const getStaticPaths = async () => {
-    const posts: MarkdownInstance<Record<string, string>>[] = await Astro.glob("../../posts/*.md")
+    const posts = await getCollection('blog')
 
     return posts.map(post => ({
-        params: {
-            post_id: post.frontmatter.slug
-        },
-        props: {
-            post
-        }
+        params: { post_id: post.id }, props: { post }
     }))
 }
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>
 
 const { post } = Astro.props
+
+const { Content } = await render(post)
 ---
-<Layout title={post.frontmatter.title} description={post.frontmatter.description}>
+<Layout title={post.data.title} description={post.data.description}>
     <div class="flex flex-col md:items-center p-6 *:max-w-3xl">
         <span class="flex justify-between w-full *:hover:">
             <Link 
@@ -41,10 +38,10 @@ const { post } = Astro.props
                 <Github />
             </Link>
         </span>
-        <h1 class="text-4xl font-bold mt-6 w-full">{post.frontmatter.title}</h1>
-        <p class="text-lg text-text-secondary mt-2 w-full">{dayjs(post.frontmatter.date).format('MMMM D, YYYY')}</p>
+        <h1 class="text-4xl font-bold mt-6 w-full">{post.data.title}</h1>
+        <p class="text-lg text-text-secondary mt-2 w-full">{dayjs(post.data.date).format('MMMM D, YYYY')}</p>
         <div id="md" class="mt-4">
-            <post.Content />
+            <Content />
         </div>
     </div>
 </Layout>
