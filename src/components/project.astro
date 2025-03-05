@@ -4,7 +4,7 @@ import Link from './link.astro'
 
 interface Props {
     title: string
-    link: string
+    link: string | undefined
     repository: string
 }
 
@@ -22,9 +22,13 @@ const { title, link, repository } = Astro.props
             >
                 <Github size="16" />
             </Link>
-            <Link href={link} alt={`Link to ${title} website`}>
-                <ExternalLink size="16" /> 
-            </Link>
+            {
+                link && (
+                    <Link href={link} alt={`Link to ${title} website`}>
+                        <ExternalLink size="16" /> 
+                    </Link>
+                )
+            }
         </span>
     </span>
     <p class="text-text-secondary">

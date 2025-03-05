@@ -6,8 +6,11 @@ import { Linkedin, Github } from 'lucide-astro'
 import { getCollection } from 'astro:content'
 import projects from '../projects.json'
 import '@fontsource-variable/raleway'
+import dayjs from 'dayjs'
 
 const posts = await getCollection('blog')
+// sort the posts
+posts.sort((a, b) => dayjs(b.data.date).unix() - dayjs(a.data.date).unix())
 ---
 <Layout title="Hi, I'm Toby" description="Hi, I'm Toby, a Computer Science student at the University of Leeds.">
     <main class="flex flex-col grow">
@@ -15,20 +18,20 @@ const posts = await getCollection('blog')
             <h1 class="text-xl font-medium text-text-secondary">
                 Hi, I'm Toby.
             </h1>
-                <h2 class="text-3xl max-w-5xl font-medium">
-                    I'm currently completing a BSc in Computer Science at the University of Leeds, graduating in 2026.
-                </h2>
-                <h3 class="text-lg font-medium text-text-secondary max-w-5xl">
-                    Creating web applications is a passion of mine, and as a full-stack developer, I have experience with Next, tRPC, Prisma, Tailwind, and Typescript.
-                    However, I love learning new technologies and am always looking to expand my skillset. 
-                    I'm currently learning Go and exploring how I can use this in my projects.
-                </h3>
-                <div class="flex gap-2 pt-2 text-text-secondary">
-                    <Link
-                        href="https://github.com/tobyrushton"
-                        alt="Link to my GitHub profile" 
-                    >
-                    <Github size="24" />
+            <h2 class="text-3xl max-w-5xl font-medium">
+                I'm a Computer Science student at the University of Leeds.
+            </h2>
+            <h3 class="text-lg font-medium text-text-secondary max-w-5xl">
+                I'm passionate about working across the full stack, from React and Typescript to Go and Postgres.
+                This summer, I'll be interning at <a class="underline" href="https://www.pexip.com/">Pexip</a>,
+                where I'm excited to make meaningful contributions to their VPaaS system and gain hands-on experience. 
+            </h3>
+            <div class="flex gap-2 pt-2 text-text-secondary">
+                <Link
+                    href="https://github.com/tobyrushton"
+                    alt="Link to my GitHub profile" 
+                >
+                <Github size="24" />
                 </Link>
                     <Link
                         href="https://www.linkedin.com/in/tobyrushton/"
@@ -36,7 +39,7 @@ const posts = await getCollection('blog')
                     >
                     <Linkedin size="24" />
                 </Link>
-                </div>
+            </div>
         </div>
         <div class="grid gap-4 p-4 grid-cols-1 sm:grid-cols-2">
             <h2 class="text-xl p-2 sm:col-span-2">
