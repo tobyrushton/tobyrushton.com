@@ -2,7 +2,7 @@
     {
         "name": "elohoops",
         "link":"https://elohoops.com",
-        "description": "Go, Typescript, Tailwind, NextJS, SST",
+        "description": "Go, Typescript, PostgreSQL, Tailwind, NextJS, SST",
         "repository": "tobyrushton/elohoops"
     },
     {
