@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header from "../components/header.astro"
+import glasses from "../shot-glasses/glasses.json"
+import { Image } from "astro:assets"
+
+const countries = new Set()
+const continents = new Set()
+
+glasses.forEach(glass => {
+    countries.add(glass.country)
+    continents.add(glass.continent)
+})
+---
+<Layout title="Shot glasses" description="My collection of shot glasses from all over the world">
+    <Header>
+        <h1 class="text-2xl font-bold">
+            Explore my collection of shot glasses from all over the world
+        </h1>
+        <p>
+            Currently, I have {glasses.length} shot glasses in my collection. They come from {countries.size} countries and {continents.size} continents.
+        </p>
+    </Header>
+    <div class="grid grid-cols-3 w-full h-full gap-2 pt-2">
+        {
+           glasses.map(glass => (
+                <div class="w-full p-2 bg-fg flex flex-col gap-2 rounded">
+                    <Image 
+                        src={`/src/shot-glasses/${glass.img}`}
+                        alt="Shot glass"
+                        width="50"
+                        height="50"
+                        class="rounded w-full"
+                    />
+                    <p>
+                        {glass.region ? `${glass.region},` : ""} {glass.country}
+                    </p>
+                </div>
+           )) 
+        }
+    </div>
+</Layout>

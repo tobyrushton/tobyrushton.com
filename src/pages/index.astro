@@ -7,6 +7,7 @@ import { getCollection } from 'astro:content'
 import projects from '../projects.json'
 import '@fontsource-variable/raleway'
 import dayjs from 'dayjs'
+import Header from '../components/header.astro'
 
 const posts = await getCollection('blog')
 // sort the posts
@@ -14,7 +15,7 @@ posts.sort((a, b) => dayjs(b.data.date).unix() - dayjs(a.data.date).unix())
 ---
 <Layout title="Hi, I'm Toby" description="Hi, I'm Toby, a Computer Science student at the University of Leeds.">
     <main class="flex flex-col grow">
-        <div class="flex flex-col bg-fg p-10 gap-2">
+        <Header>
             <h1 class="text-xl font-medium text-text-secondary">
                 Hi, I'm Toby.
             </h1>
@@ -40,7 +41,7 @@ posts.sort((a, b) => dayjs(b.data.date).unix() - dayjs(a.data.date).unix())
                     <Linkedin size="24" />
                 </Link>
             </div>
-        </div>
+        </Header>
         <div class="grid gap-4 p-4 grid-cols-1 sm:grid-cols-2">
             <h2 class="text-xl p-2 sm:col-span-2">
                 My Projects
