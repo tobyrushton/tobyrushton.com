@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import Project from '../components/project.astro'
 import Link from '../components/link.astro'
-import { Linkedin, Github } from 'lucide-astro'
+import { Linkedin, Github } from '@lucide/astro'
 import { getCollection } from 'astro:content'
 import projects from '../projects.json'
 import '@fontsource-variable/raleway'
@@ -20,11 +20,15 @@ posts.sort((a, b) => dayjs(b.data.date).unix() - dayjs(a.data.date).unix())
                 Hi, I'm Toby.
             </h1>
             <h2 class="text-3xl max-w-5xl font-medium">
-                I'm a Computer Science student at the University of Leeds.
+                I'm a final year Computer Science student at the University of Leeds.
             </h2>
             <h3 class="text-lg font-medium text-text-secondary max-w-5xl">
-                This summer I'll be interning at <a class="underline" href="https://www.pexip.com/">Pexip</a>.
-
+                I'm currently working on a final year project about serverless workflow orchestration and deployment.
+                I'm interested in infrastructure and AI.
+            </h3>
+            <h3 class="text-lg font-medium text-text-secondary max-w-5xl">
+                Previously, I interned at <a class="underline" href="https://www.pexip.com/">Pexip</a>,
+                where I worked to intergrate AI into one of their video conferencing products.
             </h3>
             <div class="flex gap-2 pt-2 text-text-secondary">
                 <Link

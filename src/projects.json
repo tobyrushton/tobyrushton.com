@@ -1,37 +1,8 @@
 [
     {
-        "name": "elohoops",
-        "link":"https://elohoops.com",
-        "description": "Go, Typescript, PostgreSQL, Tailwind, NextJS, SST",
-        "repository": "tobyrushton/elohoops"
-    },
-    {
-        "name": "Railopedia",
-        "description": "Go, Rod, Astro, Svelte, Typescript, Tailwind, SST",
-        "repository": "tobyrushton/railopedia"
-    },
-    {
-        "name": "PlaylistPal",
-        "link": "https://playlistpal.tobyrushton.com",
-        "description": "Go, HTMX, Templ, Chi, Tailwind",
-        "repository": "tobyrushton/playlistpal"
-    },
-    {
-        "name": "Nuggets Center",
-        "link": "https://nuggetscenter.xyz",
-        "description": "Next, tRPC, Prisma, Tailwind, Typescript, Serverless Framework",
-        "repository": "tobyrushton/nuggets-center"
-    },
-    {
-        "name": "Worldle Unlimited",
-        "link": "https://worldleunlimited.co.uk",
-        "description": "React, Typescript",
-        "repository": "tobyrushton/worldle-unlimited"
-    },
-    {
-        "name": "Sort-Search Visualiser",
-        "link": "https://sort-search.tobyrushton.com",
-        "description": "React, Javascript, Redux Toolkit",
-        "repository": "tobyrushton/sort-search-visualiser"
+        "name": "Flyvia",
+        "description": "WIP - Flight search engine designed with stopovers and price in mind.",
+        "repository": "tobyrushton/flyvia",
+        "link": ""
     }
 ]
